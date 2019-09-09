@@ -22,17 +22,3 @@ jobs:
 
       - name: Test
         run: make test
-
-#      - name: Merge pull requests
-#        uses: pascalgn/automerge-action@v0.2.5
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  automerge:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Automerge
-        needs: build
-        uses: pascalgn/automerge-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

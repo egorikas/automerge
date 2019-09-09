@@ -1,24 +1,9 @@
-workflow "automerge pull requests on updates" {
-  on = "pull_request"
-  resolves = ["automerge"]
+# .github/main.workflow
+workflow "on pull request pass, merge the branch" {
+  resolves = ["Auto-merge pull requests"]
+  on       = "check_run"
 }
 
-workflow "automerge pull requests on reviews" {
-  on = "pull_request_review"
-  resolves = ["automerge"]
-}
-
-workflow "automerge pull requests on status updates" {
-  on = "status"
-  resolves = ["automerge"]
-}
-
-action "automerge" {
-  uses = "pascalgn/automerge-action@33f73f0a562129c7e96123e98af20d4378f1fa3b"
-  secrets = [
-    "GITHUB_TOKEN"
-  ]
-    env = {
-      AUTOMERGE = "ready-to-merge"
-    }
+action "Auto-merge pull requests" {
+  uses = "./auto_merge_pull_requests"
 }
