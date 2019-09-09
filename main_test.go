@@ -7,5 +7,5 @@ import (
 )
 
 func TestReturnTrue(t *testing.T) {
-	require.Equal(t, false, ReturnTrue())
+	require.Equal(t, true, ReturnTrue())
 }
