@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: [pull_request]
 jobs:
 
   build:
@@ -22,3 +22,6 @@ jobs:
 
       - name: Test
         run: make test
+
+      - name: Merge pull requests
+        uses: pascalgn/automerge-action@v0.2.5
