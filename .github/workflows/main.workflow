@@ -18,4 +18,7 @@ action "automerge" {
   secrets = [
     "GITHUB_TOKEN"
   ]
+    env = {
+      AUTOMERGE = "ready-to-merge"
+    }
 }
