@@ -22,3 +22,6 @@ jobs:
 
       - name: Test
         run: make test
+
+      - name: Merge pull requests
+        uses: ./.github/actions/merge-pr

@@ -18,6 +18,6 @@ workflow "on pull request pass, merge the branch" {
   on       = "check_run"
 }
 
-action "Auto-merge pull requests" {
+action "merge-pr" {
   uses = "./auto_merge_pull_requests"
 }
