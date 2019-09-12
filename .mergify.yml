@@ -1,8 +1,7 @@
 pull_request_rules:
-  - name: Automatic merge
+  - name: automatic merge on CI success and review
     conditions:
-      - base=master
-      - "#approved-reviews-by>=1"
+      - status-success=Mergeable
     actions:
       merge:
-        strict: true
+        method: merge
